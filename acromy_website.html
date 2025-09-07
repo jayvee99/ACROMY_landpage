@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ACROMY - Réserve ta place (V1 + 3 eBooks offerts)</title>
+  <meta name="description" content="ACROMY: La nouvelle génération d’entrepreneurs qui créent ensemble. Réserve ta place pour la V1 et reçois 3 eBooks premium immédiatement." />
+  <meta property="og:title" content="ACROMY - Réserve ta place (V1 + 3 eBooks)" />
+  <meta property="og:description" content="Pas de bruit. Que de l’action. Un réseau sélectif pour transformer chaque rencontre en collaboration." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/og-acromy.jpg" />
+  <meta property="og:url" content="https://acromy.app/" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{
+      --acromy-black:#000000; /* Noir profond */
+      --acromy-bg:#0D1A16;    /* Vert ACROMY */
+      --acromy-ink:#E8E8DC;   /* Off‑white */
+      --acromy-card:#111714;  /* Cartes sombres (entre noir et vert) */
+      --acromy-accent:#D1FADF;/* Mint soft */
+    }
+    html,body{font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Noto Sans}
+    .glass{backdrop-filter: blur(8px); background: rgba(17,23,20,.55); border:1px solid rgba(225,255,240,.12)}
+    .shine{background: radial-gradient(1200px 600px at 10% -10%, rgba(209,250,223,.10), transparent 60%), radial-gradient(900px 480px at 120% 10%, rgba(209,250,223,.08), transparent 60%)}
+    .tag{display:inline-flex;align-items:center;gap:.5rem;font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;padding:.35rem .6rem;border-radius:9999px;border:1px solid rgba(255,255,255,.12);background:rgba(0,0,0,.35)}
+    .floating-cta{animation:floatY 4s ease-in-out infinite}
+    @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+  </style>
+</head>
+<body class="bg-[var(--acromy-black)] text-[var(--acromy-ink)]">
+  <!-- Header (Logo ACROMY + CTA) -->
+  <header class="sticky top-0 z-40 glass">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <img src="https://raw.githubusercontent.com/julien100605-star/11/main/acromylogo.png" alt="ACROMY logo" class="h-8 w-8 object-contain" referrerpolicy="no-referrer" />
+        <span class="text-lg font-black tracking-wide group-hover:opacity-90">ACROMY</span>
+      </a>
+      <a href="#form-hero" 
+      class="ml-auto inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[var(--acromy-ink)] text-black font-semibold hover:opacity-90 transition shadow ring-1 ring-black/10">Réserve ta place</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden shine bg-gradient-to-b from-[var(--acromy-black)] via-[#0B1512] to-[var(--acromy-bg)]">
+    <div class="max-w-7xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <div class="text-xs tracking-widest uppercase text-[var(--acromy-ink)]/70 mb-3">Réserve ta place pour la sortie officielle • <span class="font-semibold">3 eBooks offerts immédiatement</span></div>
+        <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight">La nouvelle génération d’entrepreneurs qui <span class="underline decoration-[var(--acromy-accent)] decoration-4 underline-offset-4">créent ensemble</span>.</h1>
+        <p class="mt-4 text-[var(--acromy-ink)]/85 text-base sm:text-lg max-w-xl">Pas de bruit. Que de l’action. Un réseau sélectif qui transforme chaque rencontre en collaboration concrète.</p>
+        <ul class="mt-6 text-sm sm:text-base text-[var(--acromy-ink)]/85 space-y-2">
+          <li>✔️ Accès prioritaire à la V1 par e‑mail</li>
+          <li>✔️ <strong>3 eBooks premium</strong> envoyés instantanément</li>
+        </ul>
+
+        <!-- Form (Hero) -->
+        <form id="form-hero" class="mt-8 grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-3" novalidate>
+          <label for="email-hero" class="sr-only">Ton e‑mail</label>
+          <input 
+          id="email-hero" 
+          name="email" 
+          type="email" 
+          required placeholder="ton@email.com" 
+          class="px-4 py-3 rounded-xl bg-white text-black placeholder-neutral-600 focus:outline-none" />
+          <button type="submit" class="px-6 py-3 rounded-xl bg-[var(--acromy-ink)] text-black font-semibold">Réserver ma place</button>
+          <p class="col-span-full text-xs text-[var(--acromy-ink)]/70">Zéro spam. Désinscription en 1 clic.</p>
+        </form>
+        <div id="hero-success" class="hidden mt-4 text-sm bg-emerald-600/20 border border-emerald-500/30 rounded-xl p-3">💌 Merci ! Tes 3 eBooks viennent d’être envoyés par e‑mail. Pense à vérifier tes spams.</div>
+      </div>
+
+      <!-- Hero Visual Placeholder -->
+      <div class="relative">
+        <div class="aspect-[1024/1244] rounded-2xl border border-white/10 overflow-hidden">
+          <img src="assets/tommy_flag.jpeg" 
+          alt="Mascotte ACROMY en costume vert portant un drapeau" 
+          class="w-full h-full object-contain bg-black" loading="eager" decoding="async" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACROMY PRODUCTS -->
+  <section id="products" class="py-18 md:py-20 bg-[var(--acromy-black)] border-y border-white/10">
+    <div class="max-w-7xl mx-auto px-4">
+      <p class="text-xs uppercase tracking-widest text-[var(--acromy-ink)]/60">Écosystème ACROMY (ACROMY NETWORK)</p>
+      <h2 class="text-2xl sm:text-3xl font-extrabold mt-2 mb-6">ACROMY Products</h2>
+
+      <div class="grid sm:grid-cols-2 gap-5">
+        <!-- Card 1: CONNECT -->
+        <article class="p-6 rounded-2xl bg-[var(--acromy-card)] border border-white/10">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-lg font-semibold">ACROMY CONNECT</h3>
+            <span class="tag">Core</span>
+          </div>
+          <p class="text-sm opacity-85 mb-2"><strong>ACROMY CONNECT - Le 'Tinder' des entrepreneurs</strong> (match par objectifs, filtres skill/ville/dispo).</p>
+          <p class="text-sm opacity-85">Principe: tu définis ton objectif (associer, recruter, trouver des clients). L'algorithme sélectionne des profils compatibles. Tu valides par swipe et l'ouverture de la conversation se fait instantanément en cas de match.</p>
+        </article>
+
+        <!-- Card 2: A venir (floutée sauf titre) -->
+        <article class="relative p-6 rounded-2xl bg-[var(--acromy-card)] border border-white/10 overflow-hidden">
+          <h3 class="relative z-10 text-lg font-semibold">À venir - Sortie V1</h3>
+          <div class="mt-2 space-y-2">
+            <p class="text-sm opacity-75">Nouveau produit dévoilé au lancement.</p>
+            <button class="mt-2 px-4 py-2 rounded-xl bg-neutral-800 text-neutral-400 border border-white/10 cursor-not-allowed" disabled>Indisponible</button>
+          </div>
+          <div class="absolute inset-0 rounded-2xl backdrop-blur-[3px] bg-black/40"></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fonctionnalités clés -->
+  <section id="features" class="py-20 bg-[var(--acromy-bg)]/30">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl sm:text-3xl font-extrabold mb-8">Fonctionnalités clés</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="p-6 rounded-2xl bg-[var(--acromy-card)] border border-white/10"><h3 class="font-semibold mb-2">Matching par objectifs</h3><p class="text-sm opacity-85">On te présente les bonnes personnes.</p></div>
+        <div class="p-6 rounded-2xl bg-[var(--acromy-card)] border border-white/10"><h3 class="font-semibold mb-2">Brainstorms & sprints</h3><p class="text-sm opacity-85 blur-[2px] select-none">Sessions courtes, orientées solutions.</p></div>
+        <div class="p-6 rounded-2xl bg-[var(--acromy-card)] border border-white/10"><h3 class="font-semibold mb-2">Sorties & événements</h3><p class="text-sm opacity-85">Du digital à l’IRL: liens solides.</p></div>
+        <div class="p-6 rounded-2xl bg-[var(--acromy-card)] border border-white/10"><h3 class="font-semibold mb-2">Deals & entraide</h3><p class="text-sm opacity-85 blur-[2px] select-none">Canaux pour proposer/demander/co‑créer.</p></div>
+        <div class="p-6 rounded-2xl bg-[var(--acromy-card)] border border-white/10"><h3 class="font-semibold mb-2">Badges & réputation</h3><p class="text-sm opacity-85">Ta contribution = visibilité et confiance.</p></div>
+        <div class="p-6 rounded-2xl bg-[var(--acromy-card)] border border-white/10"><h3 class="font-semibold mb-2">Accès prioritaire V1</h3><p class="text-sm opacity-85">Lien d'accès envoyé 48 h avant l'annonce publique + code early access.</p></div>
+      </div>
+
+      <!-- Form repeated -->
+      <form id="form-mid" class="mt-10 grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-3" novalidate>
+        <label for="email-mid" class="sr-only">Ton e‑mail</label>
+        <input id="email-mid" name="email" type="email" required placeholder="ton@email.com" class="px-4 py-3 rounded-xl bg-white text-black placeholder-neutral-600 focus:outline-none" />
+        <button type="submit" class="px-6 py-3 rounded-xl bg-[var(--acromy-ink)] text-black font-semibold">Réserver ma place</button>
+      </form>
+      <div id="mid-success" class="hidden mt-4 text-sm bg-emerald-600/20 border border-emerald-500/30 rounded-xl p-3">💌 Merci ! Tes 3 eBooks viennent d’être envoyés par e‑mail. Pense à vérifier tes spams.</div>
+    </div>
+  </section>
+
+  <!-- Chiffres / Social proof (bandeau visuel) -->
+  <section id="stats" class="border-y border-white/10 bg-gradient-to-r from-black via-[#0B1512] to-[var(--acromy-bg)]">
+    <div class="max-w-7xl mx-auto px-4 py-10 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="text-center p-4 rounded-xl bg-white/5 border border-white/10">
+        <div class="text-3xl md:text-4xl font-extrabold">70 000+</div>
+        <div class="text-xs uppercase tracking-wide opacity-80 mt-1">sur les réseaux</div>
+      </div>
+      <div class="text-center p-4 rounded-xl bg-white/5 border border-white/10">
+        <div class="text-3xl md:text-4xl font-extrabold">150+</div>
+        <div class="text-xs uppercase tracking-wide opacity-80 mt-1">bêta‑testeurs</div>
+      </div>
+      <div class="text-center p-4 rounded-xl bg-white/5 border border-white/10">
+        <div class="text-3xl md:text-4xl font-extrabold">500+</div>
+        <div class="text-xs uppercase tracking-wide opacity-80 mt-1">connexions qualifiées</div>
+      </div>
+      <div class="text-center p-4 rounded-xl bg-white/5 border border-white/10">
+        <div class="text-3xl md:text-4xl font-extrabold">des dizaines</div>
+        <div class="text-xs uppercase tracking-wide opacity-80 mt-1">de collaborations</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pourquoi ACROMY -->
+  <section id="pourquoi" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-start">
+      <div class="space-y-5">
+        <h2 class="text-2xl sm:text-3xl font-extrabold">Pourquoi ACROMY ?</h2>
+        <p class="text-[var(--acromy-ink)]/85">L’entrepreneuriat n’est pas un sport solitaire. Les bons deals naissent d’un réseau qualifié. ACROMY filtre le bruit et accélère les connexions qui font vraiment avancer tes projets.</p>
+        <div class="mt-4">
+          <a href="#form-mid" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[var(--acromy-ink)] text-black font-semibold">Je prends ma place maintenant</a>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="p-5 rounded-2xl bg-[var(--acromy-card)] border border-white/10"><p class="text-sm opacity-70 mb-2">Résultat Beta</p><p class="text-lg font-semibold">500+ connexions qualifiées</p></div>
+        <div class="p-5 rounded-2xl bg-[var(--acromy-card)] border border-white/10"><p class="text-sm opacity-70 mb-2">Momentum</p><p class="text-lg font-semibold">Des dizaines de collaborations lancées</p></div>
+        <div class="p-5 rounded-2xl bg-[var(--acromy-card)] border border-white/10"><p class="text-sm opacity-70 mb-2">Qualité > Quantité</p><p class="text-lg font-semibold">Communauté sélective et bienveillante</p></div>
+        <div class="p-5 rounded-2xl bg-[var(--acromy-card)] border border-white/10"><p class="text-sm opacity-70 mb-2">Bonus</p><p class="text-lg font-semibold">3 eBooks offerts dès l’inscription</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap -->
+  <section id="roadmap" class="py-20 bg-[var(--acromy-bg)]/30 border-y border-white/10">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-start">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold mb-8">Roadmap</h2>
+        <ol class="relative border-s border-white/10 ml-4">
+          <li class="mb-10 ms-6"><span class="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full bg-[var(--acromy-ink)] text-black text-xs font-bold">✓</span><h3 class="font-semibold">Beta fermée - <span class="opacity-70">Terminée</span></h3><p class="text-sm opacity-85">150+ testeurs, 500+ connexions.</p></li>
+          <li class="mb-10 ms-6"><span class="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full bg-[var(--acromy-ink)] text-black text-xs font-bold">2</span><h3 class="font-semibold">Pré‑inscriptions V1 - <span class="opacity-70">En cours (tu es ici)</span></h3></li>
+          <li class="mb-10 ms-6"><span class="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full bg-[var(--acromy-ink)] text-black text-xs font-bold">3</span><h3 class="font-semibold">Lancement V1 - <span class="opacity-70">Imminent</span></h3><p class="text-sm opacity-85">Accès prioritaire par e‑mail.</p></li>
+          <li class="ms-6"><span class="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full bg-[var(--acromy-ink)] text-black text-xs font-bold">4</span><h3 class="font-semibold">Évolution continue</h3><p class="text-sm opacity-85">Nouveaux formats, badges, events.</p></li>
+        </ol>
+      </div>
+      <div>
+        <div class="rounded-2xl overflow-hidden border border-white/10 bg-[var(--acromy-card)]">
+          <img src="/mnt/data/roadmap_side_900x1200.webp" alt="Mascotte ACROMY en costume vert connectant deux câbles" class="w-full h-full object-cover" loading="lazy" decoding="async" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Avis (Beta) -->
+  <section id="avis" class="py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl sm:text-3xl font-extrabold mb-10">Ils l’ont testé. Ils en parlent.</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <figure class="p-6 rounded-2xl bg-[var(--acromy-card)] border border-white/10">
+          <blockquote class="text-sm opacity-90">« Bonjour, Merci beaucoup pour l’opportunité de tester l’application en beta. C’est une super initiative et je trouve que c’est un excellent outil pour trouver un associé ! »</blockquote>
+          <figcaption class="mt-4 text-xs opacity-60">- Sarah L., Product Builder</figcaption>
+        </figure>
+        <figure class="p-6 rounded-2xl bg-[var(--acromy-card)] border border-white/10">
+          <blockquote class="text-sm opacity-90">« Honnêtement, je ne savais pas trop à quoi m’attendre en testant Acromy. Finalement, ça m’a permis de tomber sur des profils vraiment variés, d’apprendre de l’expérience des autres et de partager la mienne aussi. Ce que j’apprécie surtout, c’est l’esprit d’entraide, on sent qu’ici, chacun cherche à faire avancer l’autre. »</blockquote>
+          <figcaption class="mt-4 text-xs opacity-60">- Victor A., Growth</figcaption>
+        </figure>
+        <figure class="p-6 rounded-2xl bg-[var(--acromy-card)] border border-white/10">
+          <blockquote class="text-sm opacity-90">« Franchement, ça fait plaisir d’avoir rencontré des gens qui pensent comme moi, avec le même mindset, les mêmes envies et la même énergie. Acromy, ça m’a remotivé vraiment à avancer. »</blockquote>
+          <figcaption class="mt-4 text-xs opacity-60">- Paul V., Freelance</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA central -->
+  <section class="py-20 bg-black/70 border-y border-white/10">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-2xl sm:text-3xl font-extrabold">Prêt à créer avec nous ?</h2>
+      <p class="mt-3 opacity-85">Réserve ta place pour la V1 et reçois 3 eBooks gratuits immédiatement.</p>
+      <form id="form-cta" class="mt-6 grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-3" novalidate>
+        <label for="email-cta" class="sr-only">Ton e‑mail</label>
+        <input id="email-cta" name="email" type="email" required placeholder="ton@email.com" class="px-4 py-3 rounded-xl bg-white text-black placeholder-neutral-600 focus:outline-none" />
+        <button type="submit" class="px-6 py-3 rounded-xl bg-[var(--acromy-ink)] text-black font-semibold">Réserver ma place</button>
+      </form>
+      <div id="cta-success" class="hidden mt-4 text-sm bg-emerald-600/20 border border-emerald-500/30 rounded-xl p-3">💌 Merci ! Tes 3 eBooks viennent d’être envoyés par e‑mail. Pense à vérifier tes spams.</div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-2xl sm:text-3xl font-extrabold mb-8">FAQ</h2>
+      <div class="space-y-6">
+        <details class="p-5 rounded-xl bg-[var(--acromy-card)] border border-white/10"><summary class="font-semibold cursor-pointer">Quand sort la V1 ?</summary><p class="mt-3 text-sm opacity-85">Très bientôt. Les inscrits reçoivent l’accès prioritaire par e‑mail, avant l’annonce publique.</p></details>
+        <details class="p-5 rounded-xl bg-[var(--acromy-card)] border border-white/10"><summary class="font-semibold cursor-pointer">C’est payant ?</summary><p class="mt-3 text-sm opacity-85">Liste d’attente gratuite. Formules (Free, Premium, Elite) détaillées à l’ouverture.</p></details>
+        <details class="p-5 rounded-xl bg-[var(--acromy-card)] border border-white/10"><summary class="font-semibold cursor-pointer">Que deviennent mes données ?</summary><p class="mt-3 text-sm opacity-85">Jamais revendues. Uniquement pour t’informer du lancement. Désinscription à tout moment.</p></details>
+        <details class="p-5 rounded-xl bg-[var(--acromy-card)] border border-white/10"><summary class="font-semibold cursor-pointer">J’étais en Beta, dois‑je me réinscrire ?</summary><p class="mt-3 text-sm opacity-85">Oui, pour garantir l’accès prioritaire.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 border-t border-white/10 bg-black">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <div class="text-sm font-semibold mb-2">ACROMY</div>
+        <p class="text-sm opacity-75">La Fourmilière des entrepreneurs qui créent ensemble.</p>
+        <p class="text-xs opacity-50 mt-3">©️ <span id="year"></span> ACROMY - Tous droits réservés.</p>
+      </div>
+      <div class="flex items-center gap-4 text-sm">
+        <a href="/confidentialite.html" class="underline opacity-80 hover:opacity-100">Confidentialité</a>
+        <span class="opacity-30">•</span>
+        <a href="/cgu.html" class="underline opacity-80 hover:opacity-100">CGU</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky CTA -->
+  <div id="sticky" class="fixed inset-x-0 bottom-3 px-4 hidden">
+    <div class="max-w-3xl mx-auto glass rounded-2xl p-3 border border-white/10">
+      <form id="form-sticky" class="grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-2" novalidate>
+        <input id="email-sticky" name="email" type="email" required placeholder="ton@email.com" class="px-4 py-2 rounded-xl bg-white text-black placeholder-neutral-600 focus:outline-none" />
+        <button type="submit" class="px-4 py-2 rounded-xl bg-[var(--acromy-ink)] text-black font-semibold">Réserver</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Exit intent modal -->
+  <div id="exit-modal" class="fixed inset-0 hidden items-center justify-center z-50">
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="relative max-w-md w-full mx-4 p-6 rounded-2xl bg-[var(--acromy-card)] border border-white/10">
+      <h3 class="text-xl font-bold">Avant de partir 🚀</h3>
+      <p class="mt-2 text-sm opacity-85">Réserve ta place pour la V1 et reçois 3 eBooks gratuits immédiatement.</p>
+      <form id="form-exit" class="mt-4 grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-3" novalidate>
+        <input id="email-exit" name="email" type="email" required placeholder="ton@email.com" class="px-4 py-3 rounded-xl bg-white text-black placeholder-neutral-600 focus:outline-none" />
+        <button type="submit" class="px-6 py-3 rounded-xl bg-[var(--acromy-ink)] text-black font-semibold">Réserver ma place</button>
+      </form>
+      <button id="close-exit" class="mt-3 text-xs opacity-70 hover:opacity-100 underline">Non merci</button>
+    </div>
+  </div>
+    
+  <!-- JSON-LD (Organization + FAQ) -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"ACROMY","url":"https://acromy.app/","logo":"https://acromy.app/logo.png","sameAs":["https://www.instagram.com/acromy","https://www.tiktok.com/@acromy"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Quand sort la V1 ?","acceptedAnswer":{"@type":"Answer","text":"Très bientôt. Les inscrits reçoivent l’accès prioritaire par e‑mail, avant l’annonce publique."}},{"@type":"Question","name":"C’est payant ?","acceptedAnswer":{"@type":"Answer","text":"Liste d’attente gratuite. Formules (Free, Premium, Elite) détaillées à l’ouverture."}},{"@type":"Question","name":"Que deviennent mes données ?","acceptedAnswer":{"@type":"Answer","text":"Jamais revendues. Uniquement pour t’informer du lancement. Désinscription à tout moment."}},{"@type":"Question","name":"J’étais en Beta, dois‑je me réinscrire ?","acceptedAnswer":{"@type":"Answer","text":"Oui, pour garantir l’accès prioritaire."}}]}</script>
+
+  <!-- Minimal JS for forms / UX (simplifié) -->
+  <script>
+    const YEAR = document.getElementById('year'); if (YEAR) YEAR.textContent = new Date().getFullYear();
+
+    const WEBHOOK = 'https://script.google.com/macros/s/AKfycbzqqdHBGe-5DyvC-_-YyH3WoWhB3UhRm9qIPpARFB91TzhNQYuCQqY9Sb1Ah4tFj84N/exec';
+    const FORMS = [
+      {form: 'form-hero', input: 'email-hero', success: 'hero-success', source: 'hero'},
+      {form: 'form-mid', input: 'email-mid', success: 'mid-success', source: 'mid'},
+      {form: 'form-cta', input: 'email-cta', success: 'cta-success', source: 'cta'},
+      {form: 'form-sticky', input: 'email-sticky', success: null, source: 'sticky'},
+      {form: 'form-exit', input: 'email-exit', success: null, source: 'exit'}
+    ];
+
+    function getUTM(){ const p = new URLSearchParams(location.search); const keys = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','ref']; const out = {}; keys.forEach(k=>{ if(p.get(k)) out[k]=p.get(k) }); return out; }
+    function isValidEmail(email){ return email.includes('@') && email.includes('.'); }
+
+    async function sendEmail(email, source) {
+    const formData = new FormData();
+    formData.append("email", email);
+    formData.append("source", source);
+    formData.append("time", new Date().toISOString());
+
+    try {
+      const res = await fetch(WEBHOOK, {
+        method: "POST",
+        body: formData, // 👈 Pas de JSON → évite CORS
+      });
+
+      const text = await res.text();
+      console.log("Response status:", res.status);
+      console.log("Response body:", text);
+
+      return { ok: res.ok };
+    } catch (e) {
+      console.error("Fetch error:", e);
+      return { ok: false, error: e };
+    }
+  }
+
+
+
+
+    function attach(formId, inputId, successId, source){
+      const form = document.getElementById(formId);
+      const input = document.getElementById(inputId);
+      const ok = successId ? document.getElementById(successId) : null;
+      if(!form||!input) return;
+      form.addEventListener('submit', async (e)=>{
+        e.preventDefault();
+        const email = input.value.trim();
+        if(!isValidEmail(email)){
+          input.classList.add('ring-2','ring-red-500');
+          alert('Adresse e-mail invalide. Merci de vérifier.');
+          return;
+        }
+        input.classList.remove('ring-2','ring-red-500');
+        const btn = form.querySelector('button[type="submit"]');
+        const original = btn.textContent; btn.textContent = 'Envoi…'; btn.disabled = true;
+        const res = await sendEmail(email, source);
+        btn.textContent = original; btn.disabled = false;
+        if(res.ok){
+          if(ok){ ok.classList.remove('hidden'); }
+          form.reset();
+          localStorage.setItem('acromy_signed_up','1');
+          window.dataLayer = window.dataLayer || []; window.dataLayer.push({event:'lead', email, source});
+        } else {
+          alert("Oups, réessaie plus tard ou écris‑nous sur Instagram @acromy.");
+        }
+      });
+    }
+
+    FORMS.forEach(({form,input,success,source})=>attach(form,input,success,source));
+
+    // Sticky form reveal on scroll
+    const sticky = document.getElementById('sticky'); let stickyShown = false; window.addEventListener('scroll', ()=>{ if(stickyShown) return; if(window.scrollY > 500){ stickyShown = true; sticky.classList.remove('hidden'); } });
+
+    // Exit intent modal (desktop)
+    const exitModal = document.getElementById('exit-modal'); const closeExit = document.getElementById('close-exit'); let exitShown = false; function showExit(){ if(exitShown) return; exitShown = true; exitModal.classList.remove('hidden'); exitModal.classList.add('flex'); }
+    document.addEventListener('mouseleave', (e)=>{ if(e.clientY <= 0) showExit(); }); closeExit?.addEventListener('click', ()=> exitModal.classList.add('hidden'));
+  </script>
+</body>
+</html>
